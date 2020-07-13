@@ -1,12 +1,12 @@
 import "./style.css";
 import "./images/close.svg";
-import { cardMarkup, imgPopupMarkup, editPopupMarkup, addCardPopupMarkup, avatarPopupMarkup, options } from '../js/data/data.js';
-import Api from '../js/classes/Api.js';
-import PopupUtility from '../js/classes/PopupUtility.js';
-import CardList from '../js/classes/CardList.js';
-import Card from '../js/classes/Card.js';
-import FormValidator from '../js/classes/FormValidator.js';
-import UserInfo from '../js/classes/UserInfo.js';
+import { cardMarkup, imgPopupMarkup, editPopupMarkup, addCardPopupMarkup, avatarPopupMarkup, options } from './js/data/data.js';
+import Api from './js/classes/Api.js';
+import PopupUtility from './js/classes/PopupUtility.js';
+import CardList from './js/classes/CardList.js';
+import Card from './js/classes/Card.js';
+import FormValidator from './js/classes/FormValidator.js';
+import UserInfo from './js/classes/UserInfo.js';
 
 (function () {
 
