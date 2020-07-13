@@ -1,4 +1,4 @@
-class CardList {
+export default class CardList {
   constructor(container, func, showDeleteButton, api, showError, nameElem) {
     this._container = container;
     this._nameElem = nameElem;

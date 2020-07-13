@@ -110,3 +110,5 @@ const options = {
     'Content-Type': 'application/json',
   }
 }
+
+export {initialCards, cardMarkup, imgPopupMarkup, editPopupMarkup, addCardPopupMarkup, avatarPopupMarkup, options};

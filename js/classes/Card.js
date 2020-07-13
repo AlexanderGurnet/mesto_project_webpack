@@ -1,4 +1,4 @@
-class Card {
+export default class Card {
   constructor(objCard, markup, func, api, showError, nameElem) {
     this._nameElem = nameElem;
     this._name = objCard.name;

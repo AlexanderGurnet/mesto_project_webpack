@@ -1,4 +1,6 @@
-class PopupUtility extends Popup {
+import Popup from './Popup';
+
+export default class PopupUtility extends Popup {
   constructor(container, popupMarkup) {
     super(container, popupMarkup);
     this._name = this.popupContainer.querySelector('.popup__input_type_name');
