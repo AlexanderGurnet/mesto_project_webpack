@@ -1,0 +1,9 @@
+@import url(./_edit/popup__button_edit.css);
+@import url(./_add-card/popup__button_add-card.css);
+@import url(./_font-size-s/popup__button_font-size-s.css);
+@import url(./_font-size-l/popup__button_font-size-l.css);
+.popup__button {
+  width: 100%;
+  height: 50px;
+  margin-top: 48px;
+}

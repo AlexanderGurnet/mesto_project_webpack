@@ -1,0 +1,7 @@
+.popup__row {
+  margin-bottom: 24px;
+}
+
+.popup__row:last-of-type {
+  margin-bottom: 0;
+}

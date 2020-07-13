@@ -1,0 +1,14 @@
+.popup__button_edit {
+  line-height: 22px;
+  background-color: black;
+  color: white;
+  border: 1px solid rgba(0, 0, 0, .2);
+}
+
+
+.popup__button_edit:disabled {
+  pointer-events: none;
+  color: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, .2);
+  background-color: transparent;
+}

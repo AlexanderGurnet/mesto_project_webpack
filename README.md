@@ -1,0 +1,1 @@
+Website with picture gallery functionality which is implemented by means of JavaScript, HTML and CSS.
