@@ -55,7 +55,6 @@ module.exports = {
         filename: 'style.[contenthash].css',
       }),
       new HtmlWebpackPlugin({
-        // Означает, что:
         inject: false, // стили НЕ нужно прописывать внутри тегов
         template: './src/index.html', // откуда брать образец для сравнения с текущим видом проекта
         filename: 'index.html' // имя выходного файла, то есть того, что окажется в папке dist после сборки

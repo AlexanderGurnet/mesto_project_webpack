@@ -102,8 +102,10 @@ const avatarPopupMarkup = `<div class="popup__content popup__content_avatar-chan
                           </form>
                           </div>`;
 
+const API_URL = process.env.NODE_ENV === 'production' ? 'https://praktikum.tk' : 'http://praktikum.tk';
+                          
 const options = {
-  baseUrl: 'https://praktikum.tk/cohort11',
+  baseUrl: `${API_URL}/cohort11`,
   cohort: 'cohort11',
   headers: {
     authorization: '5f2b8167-6f03-48e0-b24d-b12b34e7f55d',
