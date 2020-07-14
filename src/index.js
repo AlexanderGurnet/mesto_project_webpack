@@ -1,5 +1,14 @@
+  import "./style.css";
+  import "./images/close.svg";
+  import { cardMarkup, imgPopupMarkup, editPopupMarkup, addCardPopupMarkup, avatarPopupMarkup, options } from './js/data/data.js';
+  import Api from './js/classes/Api.js';
+  import PopupUtility from './js/classes/PopupUtility.js';
+  import CardList from './js/classes/CardList.js';
+  import Card from './js/classes/Card.js';
+  import FormValidator from './js/classes/FormValidator.js';
+  import UserInfo from './js/classes/UserInfo.js';
+  
 (function () {
-
   const api = new Api(options);
   
   const popup = document.querySelector('.popup');
@@ -48,17 +57,12 @@
   }
 
   const showButtonText = (form, text) => {
-    const button = form.querySelector('button');
-    if(button.classList.contains('popup__button_card')) {
-      if(button.classList.contains('popup__button_font-size-l')) {
-        button.classList.remove('popup__button_font-size-l');
-        button.classList.add('popup__button_font-size-s');
-      } else {
-        button.classList.add('popup__button_font-size-l');
-        button.classList.remove('popup__button_font-size-s');
-      }
-    }
-    button.textContent = text;
+    form.querySelector('button').textContent = text;
+  };
+
+  const setupFontSize = (form, sizeToAdd, sizeToRemove) => {
+    form.querySelector('button').classList.add(`popup__button_font-size-${sizeToAdd}`);
+    form.querySelector('button').classList.remove(`popup__button_font-size-${sizeToRemove}`);
   };
 
   /****************************** Код Программы *************************************/
@@ -126,6 +130,7 @@
 
   addCardButton.addEventListener('click', () => {
     addCardButton.blur();
+    setupFontSize(formAddCard, 'l', 's');
     showButtonText(formAddCard, '+');
     addCardPopup.open();
     formAddCard.reset();
@@ -136,6 +141,7 @@
   formAddCard.addEventListener('submit', (event) => {
     event.preventDefault();
     api.addCard(addCardPopup.getObjCard())
+      .then(setupFontSize(formAddCard, 's', 'l'))
       .then(showButtonText(formAddCard, 'Загрузка...'))
       .then(res => {
         const cardElem = newCard(res, cardMarkup, openImgPopup, api, showError, nameElem);
@@ -148,9 +154,3 @@
   });
 })();
 
-/** REVIEW:
- * 
- * В целом по работе: 
- * 
- * Все критические ошибки были исправлены, отличная работа! Спасибо за усилия и старания, удачи в следующем спринте
- */

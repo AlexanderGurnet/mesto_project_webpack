@@ -5,12 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Mesto</title>
-        <link rel="stylesheet" href="./pages/index.css">
+        <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css %>">
     </head>    
     <body>
         <div class="root">
             <header class="header root__section">
-                <img src="./images/logo.svg" alt="mesto logo" class="logo">
+                <img src="<%=require('./images/logo.svg').default%>" alt="mesto logo" class="logo">
             </header>
             <div class="profile root__section">
                 <div class="user-info">
@@ -30,14 +30,6 @@
                 <!-- Place for Popups-->
             </div>
         </div>
-        <script src="js/data/data.js"></script>
-        <script src="./js/classes/Api.js"></script>
-        <script src="./js/classes/Card.js"></script>
-        <script src="./js/classes/UserInfo.js"></script>
-        <script src="./js/classes/CardList.js"></script>
-        <script src="./js/classes/Popup.js"></script>
-        <script src="./js/classes/PopupUtility.js"></script>
-        <script src="./js/classes/FormValidator.js"></script>
-        <script src="script.js"></script>
+        <script src="<%= htmlWebpackPlugin.files.js %>"></script>
     </body>     
 </html>
