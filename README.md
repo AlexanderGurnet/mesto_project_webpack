@@ -1,4 +1,4 @@
-# [Sprint_11_project](https://alexandergurnet.github.io/Sprint_11_project)
+# [Mesto Project With Webpack](https://alexandergurnet.github.io/mesto_project_webpack)
 
 version **1.3.0**
 
@@ -8,7 +8,7 @@ version **1.3.0**
 
 ### Clone 
 
-* Clone this repo to your local machine using `git clone https://github.com/AlexanderGurnet/Sprint_11_project.git` command.
+* Clone this repo to your local machine using `git clone https://github.com/AlexanderGurnet/mesto_project_webpack.git` command.
 
 ### Setup 
 
